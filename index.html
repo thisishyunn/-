@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위즈덤링크 - XPZ 플랫폼</title>
+    <style>
+        body {
+            font-family: 'Pretendard', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #222;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .container {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .vision, .mission, .value-proposition {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        section h2 {
+            color: #000000;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        section p {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        .sub-text {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.8;
+        }
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+        .app-download {
+            text-align: center;
+            margin-bottom: 100px;  /* footer 여백 확보 */
+        }
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 22px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .store-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .store-button {
+            height: 48px;
+            width: 160px;
+            object-fit: contain;
+            transition: transform 0.2s;
+        }
+        .store-button:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>위즈덤링크</h1>
+        <p>소수의 경험이 만드는 특별한 인사이트</p>
+    </header>
+    <div class="container">
+        <section class="vision">
+            <h2>Vision</h2>
+            <p>당신의 선택이 누군가의 나침반이 됩니다</p>
+            <p class="sub-text">세상에는 아직 공유되지 않은 수많은 경험들이 있습니다.<br>
+            우리는 그 귀중한 경험들이 더 많은 사람들에게 전달되길 원합니다.</p>
+        </section>
+        <section class="mission">
+            <h2>Mission</h2>
+            <p>소수의 경험도 충분히 가치있다</p>
+            <p class="sub-text">단 10명만이 경험한 이야기라도,<br>
+            누군가에겐 인생을 바꾸는 통찰이 될 수 있습니다.</p>
+        </section>
+        <section class="value-proposition">
+            <h2>XPZ 플랫폼</h2>
+            <p>100명 미만의 소수 경험을 발굴하고 연결하는<br>
+            새로운 방식의 경험 공유 플랫폼</p>
+        </section>
+        
+        <section class="app-download">
+            <img src="https://firebasestorage.googleapis.com/v0/b/project-xpz.firebasestorage.app/o/admin%2FApp%20icon.png?alt=media&token=9e3c766e-85b3-4949-b0fd-590799056354" alt="XPZ 앱 아이콘" class="app-icon">
+            <h2>지금 바로 XPZ를 경험해보세요</h2>
+            <p class="sub-text">새로운 관점을 발견하는 여정이 시작됩니다</p>
+            <div class="store-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.kai.xpz" target="_blank">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png" 
+                         alt="Google Play에서 다운로드" class="store-button">
+                </a>
+                <a href="https://apps.apple.com/kr/app/xpz-100%EB%AA%85-%EB%AF%B8%EB%A7%8C-%EC%A7%80%EC%8B%9D/id6740619783" target="_blank">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+                         alt="App Store에서 다운로드" class="store-button">
+                </a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 WisdomLink. All rights reserved.</p>
+    </footer>
+</body>
+</html>
