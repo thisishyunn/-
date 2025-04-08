@@ -1,7 +1,5 @@
 // DOM 요소 참조
 const contentContainer = document.getElementById('content-container');
-const searchInput = document.getElementById('search-input');
-const searchButton = document.getElementById('search-button');
 const loadingIndicator = document.getElementById('loading-indicator');
 const contentModal = document.getElementById('content-modal');
 const modalContentContainer = document.getElementById('modal-content-container');
@@ -170,8 +168,11 @@ function fetchContents() {
                      .where('id', '<=', searchTerm.toLowerCase() + '\uf8ff');
     }
     
-    // 항상 최신순으로 정렬
-    query = query.orderBy('createdAt', 'desc');
+    // recommend 필드를 기준으로 내림차순 정렬 (높은 값이 먼저 표시)
+    query = query.orderBy('recommend', 'desc');
+    
+    // 그 다음 날짜순 정렬 (동일한 recommend 값을 가진 항목들 사이에서)
+    // query = query.orderBy('createdAt', 'desc');  
     
     // 페이지네이션
     if (lastDoc) {
@@ -263,22 +264,12 @@ function animateLoadingText() {
     }, 400);
 }
 
-// 검색 실행 함수
+// 검색 실행 함수 수정
 function performSearch() {
-    searchTerm = searchInput.value.trim();
+    // 검색 기능 제거로 인한 함수 수정
     resetContentContainer();
     fetchContents();
 }
-
-// 검색 버튼 이벤트 리스너
-searchButton.addEventListener('click', performSearch);
-
-// 엔터 키 검색 이벤트 리스너
-searchInput.addEventListener('keyup', (e) => {
-    if (e.key === 'Enter') {
-        performSearch();
-    }
-});
 
 // 콘텐츠 컨테이너 초기화 함수
 function resetContentContainer() {
